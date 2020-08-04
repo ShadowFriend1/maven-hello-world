@@ -8,11 +8,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-		sh 'ls'
-		dir ('/maven-hello-world/') {
-		    sh 'ls'
-                    sh 'mvn -B -DskipTests clean package'
-		}
+                sh 'mvn -B -DskipTests clean package'
             }
         }
     }
