@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-		dir ('/maven-hello-world/') {
+		dir ('${WORKSPACE}/maven-hello-world/') {
                     sh 'mvn -B -DskipTests clean package'
 		}
             }
